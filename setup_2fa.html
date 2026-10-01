@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<h2>Optional 2FA</h2>{% if not secret %}<form method="post"><button>Enable 2FA</button></form>{% else %}<p>Add this secret to your authenticator app:</p><p><b>{{secret}}</b></p><textarea style="width:100%;height:70px" readonly>{{uri}}</textarea>{% endif %}<p><a href="/dashboard">Dashboard</a></p>{% endblock %}
